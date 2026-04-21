@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Calculator</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>⚡ NexaCalc</h1>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button onclick="showTab('basic')" class="active">Basic</button>
+    <button onclick="showTab('binary')">Binary</button>
+    <button onclick="showTab('advanced')">Advanced</button>
+  </div>
+  
+
+  <!-- BASIC -->
+  <div id="basic" class="card active">
+    <input type="text" id="basic-display" placeholder="0" readonly>
+
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteLast()">⌫</button>
+      <button onclick="append('/')">÷</button>
+      <button onclick="append('*')">×</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('-')">-</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="calculate()">=</button>
+
+      <button onclick="append('0')" class="zero">0</button>
+      <button onclick="append('.')">.</button>
+    </div>
+  </div>
+
+  <!-- BINARY -->
+  <div id="binary" class="card">
+    <input type="text" id="bin1" placeholder="Binary 1">
+    <input type="text" id="bin2" placeholder="Binary 2">
+
+    <div class="buttons">
+      <button onclick="binaryCalc('+')">Add</button>
+      <button onclick="binaryCalc('-')">Sub</button>
+      <button onclick="binaryCalc('*')">Mul</button>
+    </div>
+
+    <div class="convert">
+      <input type="number" id="decimal" placeholder="Decimal">
+      <button onclick="toBinary()">→ Binary</button>
+
+      <input type="text" id="binaryInput" placeholder="Binary">
+      <button onclick="toDecimal()">→ Decimal</button>
+    </div>
+
+    <p id="binary-result"></p>
+  </div>
+
+  <!-- ADVANCED -->
+  <div id="advanced" class="card">
+    <input type="number" id="adv-input" placeholder="Enter number">
+
+    <div class="buttons">
+      <button onclick="square()">x²</button>
+      <button onclick="cube()">x³</button>
+      <button onclick="sqrt()">√</button>
+      <button onclick="percent()">%</button>
+    </div>
+
+    <p id="adv-result"></p>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="history">
+    <h3>History</h3>
+    <ul id="history-list"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
