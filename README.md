@@ -6,7 +6,7 @@ Designed with a clean UI and smooth user experience.
 ---
 
 ## 🚀 Live Demo
-🔗[ https://your-username.github.io/nexacalc/](https://thakurshab-dev.github.io/nexacalc/)
+🔗 https://thakurshab-dev.github.io/nexacalc/
 
 ---
 
